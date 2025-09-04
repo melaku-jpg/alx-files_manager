@@ -30,6 +30,7 @@ fileQueue.process(async (job, done) => {
   files.findOne({ _id: idObject }, async (err, file) => {
     if (!file) {
       console.log('Not found');
+      console.log('please correct it.');
       done(new Error('File not found'));
     } else {
       const fileName = file.localPath;
